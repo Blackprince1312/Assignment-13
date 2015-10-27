@@ -5,6 +5,7 @@
 
   <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="font-awesome.css">
 </head>
 <body>
 <div id= "header">
@@ -17,19 +18,25 @@
 
 <div id ="formTemplate"></div>
 
-<div id= "footer">
-
-<h1 id = "button"> Submit Form</h1>
-
-</div>
-
-
-
 
 <script type="x-tmpl-mustache" id ="appInfo">
 
   {{#data}}
-    <input type = "{{type}}" placeholder = "{{label}}" />
+
+    {{#options.length}}
+
+      <select>
+        {{#options}}
+        <option value="{{value}}">{{label}}</option>
+        {{/options}}
+
+      </select>
+    {{/options.length}}
+
+
+    <input id="test" type = "{{type}}" placeholder = "        {{label}}" />
+
+    <span class = "fa {{icon}} icon"></span>
   {{/data}}
 
 </script>
@@ -41,7 +48,11 @@
 
 
 
-
+<div id="footer">
+<div id ="button">
+  <input type = "button"id = "submit" value="Submit Form">
+</div>
+</div>
 
 
 

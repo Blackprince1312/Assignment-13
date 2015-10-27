@@ -1,20 +1,23 @@
-body{border:1px solid grey;
-height: 750px;
-width: 750px;
-border-radius: 5px;
+body{
+  border: 2px solid #C8C8C8;
+  height: 870px;
+  width: 750px;
+  border-radius: 5px;
+  margin: auto;
 }
 
-#header{background-color: #378BC7;
+#header{
+  background-color: #378BC7;
   height: 100px;
   margin-top: -22px;
   padding: 0px;
-border-radius: 5px;
+  border-radius: 5px;
 }
 
-h1{
+h1 {
   color: white;
-font-family: "Raleway" , serif;
-padding: 20px;}
+  font-family: "Raleway" , serif;
+  padding: 20px;}
 
 
 #formTemplate {
@@ -26,16 +29,52 @@ padding: 20px;}
 
 #formTemplate input{
   width: 650px;
-  height: 50px;
+  height: 30px;
   margin-top: 15px;
+  padding-left:25px;
 
 }
 
-#foot{background-color: #C7DEEF;
-   height: 100px;
-  margin-top: -22px;
-  padding: 0px;
-border-radius: 5px;
- }
+#footer {
+  border: 1px solid #C8C8C8;
+  height: 100px;
+  margin-top: 170px;
+  background-color: #C7DEEF;
+}
 
- #button{}
+#button {
+  padding: 30px;
+}
+
+#submit {
+  background: #378BC7;
+  color: white;
+  width: 130px;
+  height: 40px;
+  border: none;
+  border-radius: 3px;
+  font-size: 15px;
+}
+
+.icon {
+  color: #c8c8c8;
+  position: relative;
+  bottom: 30px;
+  left: 5px;
+}
+
+#test:nth-child(12) {
+  height: 100px;
+}
+#test:nth-child(10){
+  display:none;
+}
+
+select {
+  width: 680px;
+  height: 40px;
+  margin-top: 15px;
+  background:white;
+}
+
+
