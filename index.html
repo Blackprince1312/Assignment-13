@@ -3,10 +3,9 @@
 <head>
 	<title>Assignemt 13</title>
 
-	<link rel="stylesheet" type="text/css" href="style.css">
+  <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-
-
 <body>
 <div id= "header">
 
@@ -16,7 +15,13 @@
 
 
 
-<div id ="formTemplate"> </div>
+<div id ="formTemplate"></div>
+
+<div id= "footer">
+
+<h1 id = "button"> Submit Form</h1>
+
+</div>
 
 
 
@@ -24,12 +29,10 @@
 <script type="x-tmpl-mustache" id ="appInfo">
 
   {{#data}}
-
-    {{label}}
-
+    <input type = "{{type}}" placeholder = "{{label}}" />
   {{/data}}
 
-</script
+</script>
 
 
 

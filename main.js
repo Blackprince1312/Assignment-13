@@ -5,10 +5,10 @@ var herokuapp = "http://json-data.herokuapp.com/forms";
 $.ajax({
   url: herokuapp,
   method: 'get',
-  dataType: 'jsonp'
+  dataType: 'json'
 }).then(function(data) {
 
-  var newData = {data: data};
+  var newData = {"data": data};
 
   var template = $("#appInfo").text();
 
