@@ -3,25 +3,18 @@ $(document).ready(function() {
 var herokuapp = "http://json-data.herokuapp.com/forms";
 
 $.ajax({
-  url: etsyURL,
-  dataType: 'json',
-  method: 'get'
-}).then (function (data) {
+  url: herokuapp,
+  method: 'get',
+  dataType: 'jsonp'
+}).then(function(data) {
 
-  var filterMap = data.results.map(function(obj) {
-    return {
+  var newData = {data: data};
 
-
-    };
-  });
-
-  var newData = {filterMap: filterMap};
-
-  var template = $("#").text();
+  var template = $("#appInfo").text();
 
   var listHTML = Mustache.render(template, newData);
 
-  $("#pictureContainer").html(listHTML);
+  $("#formTemplate").html(listHTML);
 
   });
 
