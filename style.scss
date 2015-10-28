@@ -1,7 +1,5 @@
 body{
   border: 2px solid #C8C8C8;
-  height: 870px;
-  width: 750px;
   border-radius: 5px;
   margin: auto;
 }
@@ -14,31 +12,25 @@ body{
   border-radius: 5px;
 }
 
+input {
+  width: 1040px;
+  height:45px;
+  padding-left: 10px;
+}
+
 h1 {
   color: white;
   font-family: "Raleway" , serif;
   padding: 20px;}
 
-
-#formTemplate {
-  height: 500px;
-  width:500px;
-  padding-left: 50px;
-  padding-right: 50px;
-}
-
-#formTemplate input{
-  width: 650px;
-  height: 30px;
-  margin-top: 15px;
-  padding-left:25px;
+#formTemplate input {
+  border: none;
 
 }
 
 #footer {
   border: 1px solid #C8C8C8;
   height: 100px;
-  margin-top: 170px;
   background-color: #C7DEEF;
 }
 
@@ -58,23 +50,22 @@ h1 {
 
 .icon {
   color: #c8c8c8;
-  position: relative;
-  bottom: 30px;
+  float: left;
+  top:15px;
   left: 5px;
-}
-
-#test:nth-child(12) {
-  height: 100px;
-}
-#test:nth-child(10){
-  display:none;
+  position:relative;
 }
 
 select {
-  width: 680px;
-  height: 40px;
-  margin-top: 15px;
-  background:white;
+  border: none;
+  float: left;
+}
+
+.wrapper {
+  border: 1px solid #C8C8C8;
+  height: 50px;
+  margin: 25px;
+
 }
 
 

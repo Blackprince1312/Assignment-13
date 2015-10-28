@@ -9,12 +9,8 @@
 </head>
 <body>
 <div id= "header">
-
-<h1 id = "signUp"> Sign Up For My Web App</h1>
-
+  <h1 id = "signUp"> Sign Up For My Web App</h1>
 </div>
-
-
 
 <div id ="formTemplate"></div>
 
@@ -22,7 +18,7 @@
 <script type="x-tmpl-mustache" id ="appInfo">
 
   {{#data}}
-
+  <div class = "wrapper">
     {{#options.length}}
 
       <select>
@@ -34,12 +30,15 @@
     {{/options.length}}
 
 
-    <input id="test" type = "{{type}}" placeholder = "        {{label}}" />
+    <input type = "{{type}}" placeholder = "{{label}}" />
 
     <span class = "fa {{icon}} icon"></span>
+  </div>
+  </div>
   {{/data}}
 
 </script>
+
 
 
 
