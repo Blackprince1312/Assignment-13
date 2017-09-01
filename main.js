@@ -1,13 +1,15 @@
-$(document).ready(function () {
-  $('#submit').click(function () {
-    $.ajax({
-      url:'http://json-data.herokuapp.com/forms',
-      method:'GET',
-      dataType: 'json',
-      success: function (result) {
-        $('#formTemplate').html(`<p> ${result}</p>`)
-        console.log(result);
-      }
-    })
-  })
-})
+$(document).ready(function() {
+  var herokuapp = "http://json-data.herokuapp.com/forms";
+  $.ajax({
+    url: herokuapp,
+    method: 'get',
+    dataType: 'json'
+  }).then(function(data) {
+    var newData = {
+      "data": data
+    };
+    var template = $("#appInfo").text();
+    var listHTML = Mustache.render(template, newData);
+    $("#formTemplate").html(listHTML);
+  });
+});

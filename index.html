@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 	<head>
 		<title>Assignemt 13</title>
 
@@ -8,7 +7,6 @@
 		<link rel="stylesheet" type="text/css" href="CSS/style.css">
 		<link rel="stylesheet" type="text/css" href="CSS/font-awesome.css">
 	</head>
-
 	<body>
 		<div id="header">
 			<h1 id="signUp">
@@ -17,15 +15,38 @@
 
 		<div id="formTemplate"></div>
 
-		<div id="footer">
-			<div id="button">
-				<input type="button" id="submit" value="Submit Form">
+		<script type="x-tmpl-mustache" id="appInfo">
+
+			{{#data}}
+				<div class="wrapper">
+					{{#options.length}}
+
+						<select>
+							{{#options}}
+								<option value="{{value}}">{{label}}</option>
+							{{/options}}
+
+						</select>
+					{{/options.length}}
+
+					<input type="{{type}}" placeholder="{{label}}"/>
+
+					<span class="fa {{icon}} icon"></span>
+				</div>
 			</div>
+		{{/data}}
+
+	</script>
+
+	<div id="footer">
+		<div id="button">
+			<input type="button" id="submit" value="Submit Form">
 		</div>
+	</div>
 
-		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-		<script type="text/javascript" src="main.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.0/mustache.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="main.js"></script>
 
-	</body>
-
+</body>
 </html>
